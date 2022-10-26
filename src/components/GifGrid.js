@@ -6,11 +6,10 @@ export const GifGrid = ({ category = "Dragon Ball" }) => {
   //   const [images, setImages] = useState([]);
 
   const { data: images, loading } = useFetchGifs(category);
-
   return (
     <>
       <h3>{category}</h3>
-      {loading && <p>Loading</p>}
+      {loading && <p>Loading data...</p>}
       <div className="card-grid">
         <ol>
           {images.map((img) => (
